@@ -2,11 +2,16 @@ package com.tinapourramezan.listviewpractice;
 
 public class Language {
     String languageName, languageDescription;
+    int flagImage;
 
-    public Language(String languageName, String languageDescription) {
+    public Language(String languageName, String languageDescription, int flagImage) {
         this.languageName = languageName;
         this.languageDescription = languageDescription;
+        this.flagImage = flagImage;
     }
+
+
+
 
     public String getLanguageName() {
         return languageName;
@@ -22,5 +27,13 @@ public class Language {
 
     public void setLanguageDescription(String languageDescription) {
         this.languageDescription = languageDescription;
+    }
+
+    public int getFlagImage() {
+        return flagImage;
+    }
+
+    public void setFlagImage(int flagImage) {
+        this.flagImage = flagImage;
     }
 }

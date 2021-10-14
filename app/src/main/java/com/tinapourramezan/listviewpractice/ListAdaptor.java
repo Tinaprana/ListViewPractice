@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,9 +30,12 @@ public ListAdaptor(Context context, ArrayList<Language> languageArrayList){
      }
         TextView languageTitle = convertView.findViewById(R.id.languageTitle);
         TextView languageDescription = convertView.findViewById(R.id.languageDescription);
+        ImageView flagIMage = convertView.findViewById(R.id.flagImage);
 
         languageTitle.setText(language.languageName);
         languageDescription.setText(language.languageDescription);
-        return super.getView(position, convertView, parent);
+        flagIMage.setImageResource(language.flagImage);
+      
+        return convertView;
     }
 }
